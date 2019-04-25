@@ -45,6 +45,10 @@ public class HolidayAdapter extends ArrayAdapter<Holiday> {
         }
         else if (icon.equals("ld")){
             ivIcon.setImageResource(R.drawable.ld);
+        }else if(icon.equals("christmas")){
+            ivIcon.setImageResource(R.drawable.christmas);
+        }else if(icon.equals("gf")){
+            ivIcon.setImageResource(R.drawable.gf);
         }
         // Return the nicely done up View to the ListView
         return rowView;

@@ -51,45 +51,26 @@ public class SecondActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                 }
             });
-        } /*else if (year.equals("Year 2")) {
-            module.add(new Module("T202", false));
-            module.add(new Module("C346", true));
-            module.add(new Module("C348", true));
+        } else if (type.equals("Ethnic & Religion")) {
+            holiday.add(new Holiday("Easter", "21 April 2019", "gf"));
+            holiday.add(new Holiday("Christmas", "25 Dec 2019", "christmas"));
 
-            aa = new ModuleAdapter(this, R.layout.row_second, module);
+
+            aa = new HolidayAdapter(this, R.layout.row_second, holiday);
             lv.setAdapter(aa);
 
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Module selectedModule = module.get(position);
+                    Holiday selectedHoliday = holiday.get(position);
 
-                    Toast.makeText(SecondActivity.this, selectedModule.getCode()
-                                    + " Programming: " + selectedModule.isProg(),
+                    Toast.makeText(SecondActivity.this, selectedHoliday.getName()
+                                    + " Date: " + selectedHoliday.getDate(),
                             Toast.LENGTH_LONG).show();
                 }
             });
-        } else {
-            module.add(new Module("C349", true));
-            module.add(new Module("C347", true));
-            module.add(new Module("C308", true));
-
-            aa = new ModuleAdapter(this, R.layout.row_second, module);
-            lv.setAdapter(aa);
-
-            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Module selectedModule = module.get(position);
-
-                    Toast.makeText(SecondActivity.this, selectedModule.getCode()
-                                    + " Programming: " + selectedModule.isProg(),
-                            Toast.LENGTH_LONG).show();
-                }
-            });
-        }*/
+        }
 /*        module.add(new Module("C208", true));
         module.add(new Module("B216", false));
         module.add(new Module("C105", true));
